@@ -1,0 +1,367 @@
+#!/bin/bash
+# =========================================================================
+# =========================================================================
+#
+#	rustc.lib
+#
+#		A library of support functions and utilities for rustc bash scripts.
+#
+# =========================================================================
+#
+# @author Jay Wheeler.
+# @version 0.1.0
+# @copyright © 2019. EarthWalk Software.
+# @license Licensed under the GNU General Public License, GPL-3.0-or-later.
+# @package ewsdocker/ldc-dev
+# @subpackage rustc.lib
+#
+# =========================================================================
+#
+#	Copyright © 2019. EarthWalk Software
+#	Licensed under the GNU General Public License, GPL-3.0-or-later.
+#
+#   This file is part of ewsdocker/ldc-dev.
+#
+#   ewsdocker/ldc-dev is free software: you can redistribute 
+#   it and/or modify it under the terms of the GNU General Public License 
+#   as published by the Free Software Foundation, either version 3 of the 
+#   License, or (at your option) any later version.
+#
+#   ewsdocker/ldc-dev is distributed in the hope that it will 
+#   be useful, but WITHOUT ANY WARRANTY; without even the implied warranty 
+#   of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with ewsdocker/ldc-dev.  If not, see 
+#   <http://www.gnu.org/licenses/>.
+#
+# =========================================================================
+# =========================================================================
+
+# =========================================================================
+# =========================================================================
+#
+#	A library of support functions and utilities
+#
+# =========================================================================
+# =========================================================================
+
+# =========================================================================
+# =========================================================================
+#
+#	Dependencies:
+#		lmsArchiveUtilities.lib
+#		lmsBashVars.lib
+#		lmsDisplay.lib
+#		lmsPath.lib
+#		
+# =========================================================================
+# =========================================================================
+
+# =========================================================================
+# =========================================================================
+#
+#	rustc.lib Functions
+#
+#        VERB      FUNCTION
+#       =======  =============
+#       archive  rclib_Archive
+#       build    rclib_Build
+#       compile  rclib_Compile
+#       error    rclib_Error
+#		install  rclib_Install
+#       new      rclib_New
+#       path     rclib_Path
+#       setup    rclib_Setup
+#
+# =========================================================================
+# =========================================================================
+
+# =========================================================================
+#
+#    rclib_Archive - create an archive of the installed rustc compiler
+#
+#	Entry:
+#		pkg = rustc package name (defaults to $rcPkg)
+#		src = source of the archive (folder path)
+#		opts = (optional) tar options
+#
+#	Exit:
+#		0 = no error
+#		non-zero = error code
+#
+# =========================================================================
+function rclib_Archive()
+{
+	local l_pkg=${1:-"$rcPkg"}
+	local l_src=${2:-""}
+	local l_opts=${3:-""}
+	
+	[[ -z ${l_pkg} || -z ${l_src} ]] && return 1
+
+	local l_tarball="${l_pkg}.tar"
+	local l_tgz="${l_tarball}.gz"
+
+	[[ -e "${l_tarball}" ]] && rm "${l_tarball}"
+	[[ -e "${l_tgz}" ]] && rm "${l_tgz}"
+
+	lmsArchive "${l_pkg}" "${l_src}" "${rcRepo}" "1" "${l_opts}"
+	[[ $? -eq 0 ]] || return 2
+
+	return 0
+}
+
+# =========================================================================
+#
+#    rclib_Build - download and build (install) rust compiler
+#
+#	Entry:
+#		rust_url = URL of the script server
+#		rust_pkg = the script package to download
+#
+#	Exit:
+#		0 = no error
+#		non-zero = error code
+#
+# =========================================================================
+function rclib_Build()
+{
+	local lurl="${1}"
+	local lpkg="${2}"
+
+	[[ -z ${lurl} || -z ${lpkg} ]] && return 1
+
+	wget ${lurl}
+	[[ $? -eq 0 ]] || return 2
+
+	chmod +x ./${lpkg}
+
+	./${lpkg} -y -v --no-modify-path
+	[[ $? -eq 0 ]] || return 3
+
+	rclib_Path '${HOME}/.cargo/bin'
+	[[ $? -eq 0 ]] || return 4
+	
+	return 0
+}
+
+# =========================================================================
+#
+#    rclib_Command - select (execute) the requested function, if valid
+#
+#	parameters:
+#		cmdVerb = command (verb) to execute (defaults to "help")
+#		cmdAdverb = (optional) command arguments (defaults to none)
+#		cmdMod = (optional) extra mods to adverb
+#
+#    Result:
+#        0 = no error
+#        non-zero = error number
+#
+# =========================================================================
+function rclib_Command()
+{
+	local    cmdVerb=${1:-"help"}
+	local    cmdAdverb=${2:-""}
+	local    cmdMod=${3:-""}
+
+	[[ ${rcVList} =~ ${cmdVerb} ]] || return 1
+
+ 	${cmdVerb} "${cmdAdverb}" "${cmdMod}"
+	return $?
+}
+
+# =========================================================================
+#
+#    rclib_Compile - compile the rust program
+#
+#	Entry:
+#		cadverb = string containing name of source to compile
+#		copts = (optional) string containing compile options
+#
+#	Exit:
+#		0 = no error
+#		non-zero = error code
+#
+# =========================================================================
+function rclib_Compile()
+{
+	local cadverb=${1:-"$rcAdverb"}
+	local copts=${2:-""}
+
+	[[ -z ${cadverb} ]] && 
+	 {
+		rcResult=1
+		return ${rcResult}
+	 }
+
+	echo "${cadverb}=/${cadverb}" >> ${HOME}/.bashrc
+
+	rclib_Path '${HOME}/.cargo/bin'
+	rcResult=$?
+
+	[[ ${rcResult} -eq 0 ]] && 
+	 {
+		[[ -z ${copts} ]] && cargo install --force "${cadverb}" || cargo install " ${copts} ${cadverb}"
+		rcResult=$?
+	 }
+
+	[[ ${rcResult} -eq 0 ]] && ln -s ~/.cargo/bin/${cadverb} /usr/local/bin/${cadverb}
+	return ${rcResult}
+}
+
+# =========================================================================
+#
+#    rclib_Error
+#
+#	Entry:
+#		none
+#	Exit:
+#		0 = no error
+#		non-zero = error code
+#
+# =========================================================================
+function rclib_Error()
+{
+	rcError=${1:-"none"}
+	rcResult=0
+
+	[[ ${rcEList} =~ ${rcError} ]] || 
+	 {
+	 	rcError="unknown"
+		rcResult=1
+	 }
+
+	rcEMsg=${rcEMsgs[$rcError]}
+	
+	bashLineLocation "rcELoc" "rclib_Error"
+	[[ $? -gt 1 ]] && rcResult=2
+
+	rcEIndex=0
+	while [ ${rcEIndex} -lt ${#rcErrors[*]} ]
+	do
+		[[ "$rcError" == "${rcErrors[$rcEIndex]}" ]] && break
+		let rcEIndex=${rcEIndex}+1
+	done
+
+	[[ ${rcEIndex} -lt ${#rcErrors[*]} ]] || rcResult=3
+
+	return ${rcResult}
+}
+
+# =========================================================================
+#
+#  rclib_Install - install compiler
+#
+#	Entry:
+#		none
+#	Exit:
+#		0 = no error
+#		non-zero = error code
+#
+# =========================================================================
+function rclib_Install()
+{
+	wget "${RUSTC_URL}"
+	[[ $? -eq 0 ]] || return 1
+
+	tar -xvf "${RUSTC_PKG}"
+	[[ $? -eq 0 ]] || return 2
+
+	rm "${RUSTC_PKG}"
+
+	rclib_Path '${HOME}/.cargo/bin'
+	[[ $? -eq 0 ]] || return 3
+	
+	return 0
+}
+
+# =========================================================================
+#
+#    rclib_New - remove currently installed rust compiler from the container
+#
+#	Entry:
+#		none
+#	Exit:
+#		0 = no error
+#		non-zero = error code
+#
+# =========================================================================
+function rclib_New()
+{
+	[[ -e "${HOME}/.rust"   ]] && rm -Rf "${HOME}/.rustup"  1 > /dev/null 2>&1
+	[[ -e "${HOME}/.cargo"  ]] && rm -Rf "${HOME}/.cargo"   1 > /dev/null 2>&1
+	[[ -e "${HOME}/.bashrc" && ${rcContainer} -eq 1 ]] && rm -Rf "${HOME}/.bashrc"  1 > /dev/null 2>&1
+
+	rclib_Error "none"
+	return 0
+}
+
+# =========================================================================
+#
+#    rclib_Path - add an element in $PATH
+#
+#	Entry:
+#		local rPath = path entry to add
+#
+#	Exit:
+#		0 = requested path (rPath) was added
+#		non-zero = requested path (rPath) was not found
+#
+# =========================================================================
+function rclib_Path()
+{
+	local    rPath=${1:-""}
+
+	[[ -z ${rPath} ]] && return 1
+
+	lpathExists '${rPath}'
+	[[ $? -eq 0 ]] ||
+	 {
+		lpathAdd '${rPath}'
+		[[ $? -eq 0 ]] || return 2
+
+ 		lpathCommit
+		[[ $? -eq 0 ]] || return 3
+	 }
+
+	return 0
+}
+
+# =========================================================================
+# =========================================================================
+#
+#		Easy entry point... 
+#
+# =========================================================================
+# =========================================================================
+
+# =========================================================================
+#
+#    rclib - easy to remember interface to the library (calls rclib_Command)
+#
+#	Entry:
+#		rVerb = library command
+#		rAdverb = (optional) command modifier(s)
+#       rMod = (optional) additional information to pass to the command
+#	Exit:
+#		0 = no error
+#		non-zero = error code
+#
+# =========================================================================
+function rclib()
+{
+	local    rVerb=${1:-"help"}
+	local    rAdverb=${2:-""}
+	local    rMod=${3:-""}
+
+	rclib_Command ${rVerb} "${rAdverb}" "${rMod}"
+	return $?
+}
+
+# =========================================================================
+#
+#		End of the Library
+#
+# =========================================================================
