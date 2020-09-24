@@ -1,47 +1,47 @@
 # =========================================================================
 # =========================================================================
 #
-#	Dockerfile.dbashvars
-#	  Dockerfile for ldc-dev:dbashvars.
+#	Dockerfile
+#	  Dockerfile for ldc-development:dbashvars.
 #
 # =========================================================================
 #
 # @author Jay Wheeler.
 # @version 0.1.0
-# @copyright © 2019. EarthWalk Software.
+# @copyright © 2020. EarthWalk Software.
 # @license Licensed under the GNU General Public License, GPL-3.0-or-later.
-# @package ewsdocker/ldc-dev
+# @package ewsdocker/ldc-development
 # @subpackage Dockerfile.dbashvars
 #
 # =========================================================================
 #
-#	Copyright © 2019. EarthWalk Software
+#	Copyright © 2020. EarthWalk Software
 #	Licensed under the GNU General Public License, GPL-3.0-or-later.
 #
-#   This file is part of ewsdocker/ldc-dev.
+#   This file is part of ewsdocker/ldc-development.
 #
-#   ewsdocker/ldc-dev is free software: you can redistribute 
+#   ewsdocker/ldc-development is free software: you can redistribute 
 #   it and/or modify it under the terms of the GNU General Public License 
 #   as published by the Free Software Foundation, either version 3 of the 
 #   License, or (at your option) any later version.
 #
-#   ewsdocker/ldc-dev is distributed in the hope that it will 
+#   ewsdocker/ldc-development is distributed in the hope that it will 
 #   be useful, but WITHOUT ANY WARRANTY; without even the implied warranty 
 #   of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License
-#   along with ewsdocker/ldc-dev.  If not, see 
+#   along with ewsdocker/ldc-development.  If not, see 
 #   <http://www.gnu.org/licenses/>.
 #
 # =========================================================================
 # =========================================================================
 
 ARG FROM_REPO="ewsdocker"
-ARG FROM_PARENT="ldc-dev"
+ARG FROM_PARENT="ldc-development"
 ARG FROM_VERS="drustc"
 ARG FROM_EXT="-0.1.0"
-ARG FROM_EXT_MOD=""
+ARG FROM_EXT_MOD="-d4"
 
 FROM ${FROM_REPO}/${FROM_PARENT}:${FROM_VERS}${FROM_EXT}${FROM_EXT_MOD}
 
@@ -112,7 +112,7 @@ ENV \
     LMS_CONF= \
     \
     LMS_CATEGORIES=${BUILD_CATEGORIES:-"Development"} \
-    LMS_DESKTOP=${BUILD_DESKTOP:-"bashVarsTests"} \
+    LMS_DESKTOP=${BUILD_DESKTOP:-"bashVars"} \
     LMS_ICON=${BUILD_ICON:-"default.png"} \
     \
     LMS_FROM="${FROM_PARENT}:${FROM_VERS}${FROM_EXT}${FROM_EXT_MOD}" \
@@ -121,10 +121,10 @@ ENV \
     LMS_REGISTRY=${BUILD_REGISTRY} \
     LMS_REPO=${BUILD_REPO:-"ewsdocker"} \
     \
-    LMS_NAME=${BUILD_NAME:-"ldc-dev"} \
-    LMS_VERSION=${BUILD_VERSION:-"bashVarsTests"} \
+    LMS_NAME=${BUILD_NAME:-"ldc-development"} \
+    LMS_VERSION=${BUILD_VERSION:-"bashVars"} \
     LMS_VERS_X=${BUILD_VERS_EXT:-"-0.1.0"} \
-    LMS_VERS_MOD=${BUILD_EXT_MOD} \
+    LMS_VERS_MOD=${BUILD_EXT_MOD:-"-b4"} \
     \
     LMS_BLD_PKG=${BUILD_PKG:-"bash"} 
 
