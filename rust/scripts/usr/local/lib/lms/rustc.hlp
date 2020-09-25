@@ -1,0 +1,84 @@
+#!/bin/bash
+# =========================================================================
+# =========================================================================
+#
+#	rustc.hlp
+#
+#		A library of support functions and utilities for rustc bash scripts.
+#
+# =========================================================================
+#
+#	NOTE - this module must load after rustc.lib
+#
+#	Load Sequence
+#		rustc.dcl
+#		rustc.lib
+#       rustc.hlp
+#		
+# =========================================================================
+# =========================================================================
+#
+# @author Jay Wheeler.
+# @version 0.1.0
+# @copyright © 2019-2020. EarthWalk Software.
+# @license Licensed under the GNU General Public License, GPL-3.0-or-later.
+# @package ewsdocker/ldc-development
+# @subpackage rustc.hlp
+#
+# =========================================================================
+#
+#	Copyright © 2019-2020. EarthWalk Software
+#	Licensed under the GNU General Public License, GPL-3.0-or-later.
+#
+#   This file is part of ewsdocker/ldc-development.
+#
+#   ewsdocker/ldc-development is free software: you can redistribute 
+#   it and/or modify it under the terms of the GNU General Public License 
+#   as published by the Free Software Foundation, either version 3 of the 
+#   License, or (at your option) any later version.
+#
+#   ewsdocker/ldc-development is distributed in the hope that it will 
+#   be useful, but WITHOUT ANY WARRANTY; without even the implied warranty 
+#   of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with ewsdocker/ldc-development.  If not, see 
+#   <http://www.gnu.org/licenses/>.
+#
+# =========================================================================
+# =========================================================================
+
+# =========================================================================
+# =========================================================================
+#
+#	A library of support functions and utilities
+#
+# =========================================================================
+# =========================================================================
+
+# =========================================================================
+#
+#    rclib_Help - output the help messages
+#
+#	Entry:
+#		none
+#
+#	Exit:
+#		0 = no error
+#		non-zero = error code
+#
+# =========================================================================
+function rclib_Help()
+{
+	lmsDisplayTs "  archive = create archive of the current rustc compiler and library."
+	lmsDisplayTs "  build   = build a new rustc compiler."
+	lmsDisplayTs "  compile = compile a rustc application."
+	lmsDisplayTs "  error   = (set/)get the current library error."
+	lmsDisplayTs "  help    = output this help message."
+	lmsDisplayTs "  install = install a rustc compiler version from archive."
+	lmsDisplayTs "  new     = reset the program and delete current compiler from memory."
+	lmsDisplayTs "  setup   = execute \"new\", \"build\", \"compile\" and \"archive\", in that order."
+
+	return 0
+}
