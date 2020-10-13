@@ -2,31 +2,31 @@
 
 # ===========================================================================
 #
-#    ldc-development:dbashvars-0.1.0
+#    ldc-development:bashvars-0.1.0
 #
 # ===========================================================================
 cd ~/Development/ewsldc/ldc-development
 
 echo "   ********************************************"
 echo "   ****"
-echo "   **** removing dbashvars container"
+echo "   **** removing bashvars container"
 echo "   ****"
 echo "   ********************************************"
 echo
-docker stop ldc-development-dbashvars-0.1.0-b4 > /dev/null 2>&1
-docker rm ldc-development-dbashvars-0.1.0-b4 > /dev/null 2>&1
+docker stop ldc-development-bashvars-0.1.0-b4 > /dev/null 2>&1
+docker rm ldc-development-bashvars-0.1.0-b4 > /dev/null 2>&1
 
 echo "   ********************************************"
 echo "   ****"
-echo "   **** removing dbashvars image"
+echo "   **** removing bashvars image"
 echo "   ****"
 echo "   ********************************************"
 echo
-docker rmi ewsdocker/ldc-development:dbashvars-0.1.0-b4 > /dev/null 2>&1
+docker rmi ewsdocker/ldc-development:bashvars-0.1.0-b4 > /dev/null 2>&1
 
 echo "   ***************************************************"
 echo "   ****"
-echo "   **** building ewsdocker/ldc-development:dbashvars-0.1.0-b4 image "
+echo "   **** building ewsdocker/ldc-development:bashvars-0.1.0-b4 image "
 echo "   ****"
 echo "   ***************************************************"
 echo
@@ -56,15 +56,15 @@ docker build \
 -t ewsdocker/ldc-development:bashvars-0.1.0-b4 .
 [[ $? -eq 0 ]] ||
  {
- 	echo "build ewsdocker/ldc-development:dbashvars-0.1.0-b4 failed."
+ 	echo "build ewsdocker/ldc-development:bashvars-0.1.0-b4 failed."
  	exit 1
  }
 
 echo "   ***********************************************"
 echo "   ****"
-echo "   **** installing ldc-development-dbashvars-0.1.0-b4 container"
+echo "   **** installing ldc-development-bashvars-0.1.0-b4 container"
 echo "   ****"
 echo "   ***********************************************"
 echo
 
-. run/dbashvars.sh
+. run/bashvars.sh
