@@ -1,0 +1,45 @@
+#!/bin/bash
+# =========================================================================
+# =========================================================================
+#
+#	alpine-pull-gallery:3.8.0
+#
+# =========================================================================
+#
+# @author Jay Wheeler.
+# @version 3.8.0
+# @copyright © 2018. EarthWalk Software.
+# @license Licensed under the GNU General Public License, GPL-3.0-or-later.
+# @package ewsdocker/alpine-pull-gallery
+# @subpackage alpine-pull-gallery
+#
+# =========================================================================
+#
+#	Copyright © 2018. EarthWalk Software
+#	Licensed under the GNU General Public License, GPL-3.0-or-later.
+#
+#   This file is part of ewsdocker/alpine-pull-gallery.
+#
+#   ewsdocker/alpine-pull-gallery is free software: you can redistribute 
+#   it and/or modify it under the terms of the GNU General Public License 
+#   as published by the Free Software Foundation, either version 3 of the 
+#   License, or (at your option) any later version.
+#
+#   ewsdocker/alpine-pull-gallery is distributed in the hope that it will 
+#   be useful, but WITHOUT ANY WARRANTY; without even the implied warranty 
+#   of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with ewsdocker/alpine-pull-gallery.  If not, see 
+#   <http://www.gnu.org/licenses/>.
+#
+# =========================================================================
+
+docker run -it \
+           --rm \
+           -v /etc/localtime:/etc/localtime:ro \
+           -v ${HOME}/RipMe:/data \
+           -v ${HOME}/.config/docker/alpine-pull-gallery-3.8.0/workspace:/workspace \
+           --name=alpine-pull-gallery-3.8.0 \
+       ewsdocker/alpine-pull-gallery:3.8.0 
