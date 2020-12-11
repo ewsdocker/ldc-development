@@ -1,0 +1,443 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*       Copyright © 2003 EarthWalk Village.         						  */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/* 																			  */
+/*       colorThenes.css is a GLOBAL color theme stylesheet for all			  */
+/*		 documents.        	   		  			  			 	 	 		  */
+/*         It should be included prior to all other stylesheets and			  */
+/*		   local style declarations.   	  	  								  */
+/* 																			  */
+/* ************************************************************************** */
+/* ************************************************************************** */
+/* 																			  */
+/*    some standard color themes					  		  				  */
+/*	  	   	   		   		  		  	 	 	  							  */
+/* ************************************************************************** */
+  
+  .titleBloodOnBlack
+    {
+	  border-color:				#D90000;
+	  background-color:			#D90000;
+	  color:					#000000;
+	}
+  .textBloodOnBlack
+    {
+	  background-color:			#000000;
+	  color:					#D90000;
+	  border-color:				#D90000;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleBlackLight
+    {
+	  border-color:				#561B8B;
+	  background-color:			#561B8B;
+	  color:					transparent;
+	}
+  .textBlackLight
+    {
+	  background-color:			transparent;
+	  color:					#561B8B;
+	  border-color:				#561B8B;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleBlackLightBright
+    {
+	  border-color:				#8831D7;
+	  background-color:			#8831D7;
+	  color:					transparent;
+	}
+  .textBlackLightBright
+    {
+	  background-color:			transparent;
+	  color:					#8831D7;
+	  border-color:				#8831D7;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleBlackLightOnBlood
+    {
+	  background-color:			#D90000;
+	  border-color:				#561B8B;
+	  color:					#37115B;
+	}
+
+  /* ************************************************************************ */
+  .titleBlue
+    {
+	  border-color:				#0000B9;
+	  background-color:			#0000B9;
+	  color:					#F1F1F1;
+	}
+  .textBlue
+    {
+	  background-color:			#F1F1F1;
+	  color:					#0000B9;
+	  border-color:				#0000B9;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleNavBar
+    {
+	  border-color:				#0000B9;
+	  background-color:			#0000B9;
+	  color:					#F1F1F1;
+	}
+  .textNavBar
+    {
+	  background-color:			#F1F1F1;
+	  color:					#0000B9;
+	  border-color:				#0000B9;
+	}
+
+  /* ************************************************************************ */
+  
+  .textBlueTransparent
+    {
+	  background-color:			transparent;
+	  color:					#0000B9;
+	  border-color:				#0000B9;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleBlueGoingFishing
+    {
+	  border-color:				#DBDBDB;
+	  background-color:			#DBDBDB;
+	  color:					#B7B7FF;
+	}
+  .textBlueGoingFishing
+    {
+	  border-color:				#DBDBDB;
+	  background-color:			#B7B7FF;
+	  color:					#DBDBDB;
+	}
+	
+  /* ************************************************************************ */
+  
+  .titleBlueOnDarkGray
+    {
+	  border-color:				#0000B9;
+	  background-color:			#0000B9;
+	  color:					#DBDBDB;
+	}
+  .textBlueOnDarkGray
+    {
+	  background-color:			#595959;
+	  color:					#FFFFFF;
+	  border-color:				#FFFFFF;
+	}
+
+  /* ************************************************************************ */
+
+  .titleBlueOnBlack
+    {
+	  border-color:				#0000B9;
+	  background-color:			#0000B9;
+	  color:					#000000;
+	}
+  .textBlueOnBlack
+    {
+	  background-color:			#000000;
+	  color:					#0000B9;
+	  border-color:				#0000B9;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleBlueOnWhite
+    {
+	  border-color:				#0015D9;
+	  background-color:			#0015D9;
+	  color:					#FFFFFF;
+	}
+  .textBlueOnWhite
+    {
+	  background-color:			#FFFFFF;
+	  color:					#0015D9;
+	  border-color:				#0015D9;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleDarkBlueOnWhite
+    {
+	  border-color:				#FFFFFF;
+	  background-color:			#000066;
+	  color:					#FFFFFF;
+	}
+  .textDarkBlueOnWhite
+    {
+	  background-color:			#FFFFFF;
+	  color:					#000066;
+	  border-color:				#FFFFFF;
+	}
+
+  /* ************************************************************************ */
+  
+  .titlePurple
+    {
+	  border-color:				#AC22AC;
+	  background-color:			#AC22AC;
+	  color:					#F7D2F7;
+	}
+  .textPurple
+    {
+	  background-color:			#F7D2F7;
+	  color:					#AC22AC;
+	  border-color:				#FFFFFF;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleMaroon
+    {
+	  border-color:				#7F1F55;
+	  background-color:			#7F1F55;
+	  color:					#EEB7D6;
+	}
+  .textMaroon
+    {
+	  background-color:			#EEB7D6;
+	  color:					#7F1F55;
+	  border-color:				#FFFFFF;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleYellow
+    {
+	  border-color:				#FFCC00;
+	  background-color:			#FFCC00;
+	  color:					#FFE991;
+	}
+  .textYellow
+    {
+	  background-color:			#FFE991;
+	  color:					#FFCC00;
+	  border-color:				#FFCC00;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleOrange
+    {
+	  border-color:				#FF5300;
+	  background-color:			#FF5300;
+	  color:					#FFBE9F;
+	}
+  .textOrange
+    {
+	  background-color:			#FFBE9F;
+	  color:					#FF5300;
+	  border-color:				#FF5300;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleGreen
+    {
+	  border-color:				#007F55;
+	  background-color:			#007F55;
+	  color:					#DFFFF0;
+	}
+  .textGreen
+    {
+	  background-color:			#DFFFF0;
+	  color:					#007F55;
+	  border-color:				#007F55;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleDarkGreen
+    {
+	  border-color:				#00512B;
+	  background-color:			#00512B;
+	  color:					#D5FFEB;
+	}
+  .textDarkGreen
+    {
+	  background-color:			#D5FFEB;
+	  color:					#00512B;
+	  border-color:				#00512B;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleDarkGray
+    {
+	  border-color:				#595959;
+	  background-color:			#595959;
+	  color:					#DBDBDB;
+	}
+  .textDarkGray
+    {
+	  background-color:			#DBDBDB;
+	  color:					#595959;
+	  border-color:				#595959;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleDarkGrayWhite
+    {
+	  border-color:				#595959;
+	  background-color:			#595959;
+	  color:					#FFFFFF;
+	}
+  .textDarkGrayWhite
+    {
+	  background-color:			#FFFFFF;
+	  color:					#595959;
+	  border-color:				#595959;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleWhiteOnBlack
+    {
+	  border-color:				#ffffff;
+	  background-color:			#ffffff;
+	  color:					#000000;
+	}
+  .textWhiteOnBlack
+    {
+	  background-color:			#000000;
+	  color:					#ffffff;
+	  border-color:				#ffffff;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleRed
+    {
+	  border-color:				#DB0626;
+	  background-color:			#DB0626;
+	  color:					#FEEDEF;
+	}
+  .textRed
+    {
+	  background-color:			#FEEDEF;
+	  color:					#DB0626;
+	  border-color:				#DB0626;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleRedOnWhite
+    {
+	  border-color:				#DB0626;
+	  background-color:			#DB0626;
+	  color:					#FFFFFF;
+	}
+  .textRedOnWhite
+    {
+	  background-color:			#FFFFFF;
+	  color:					#DB0626;
+	  border-color:				#DB0626;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleRedOnGray
+    {
+	  border-color:				#DB0626;
+	  background-color:			#DB0626;
+	  color:					#C0C0C0;
+	}
+  .textRedOnGray
+    {
+	  background-color:			#C0C0C0;
+	  color:					#DB0626;
+	  border-color:				#DB0626;
+	}
+
+  /* ************************************************************************ */
+  
+  .titlePink
+    {
+	  border-color:				#790079;
+	  background-color:			#790079;
+	  color:					#FFFFFF;
+	}
+  .textPink
+    {
+	  background-color:			#FFFFFF;
+	  color:					#790079;
+	  border-color:				#790079;
+	}
+
+  /* ************************************************************************ */
+  
+  .textPinkTransparent
+    {
+	  background-color:			transparent;
+	  color:					#790079;
+	  border-color:				#790079;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleTruePink
+    {
+	  border-color:				#E1006B;
+	  background-color:			#E1006B;
+	  color:					#FFCCE4;
+	}
+  .textTruePink
+    {
+	  background-color:			#FFCCE4;
+	  color:					#E1006B;
+	  border-color:				#E1006B;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleLavender
+    {
+	  border-color:				#32009B;
+	  background-color:			#32009B;
+	  color:					#C6AAFF;
+	}
+  .textLavender
+    {
+	  background-color:			#C6AAFF;
+	  color:					#32009B;
+	  border-color:				#32009B;
+	}
+
+  /* ************************************************************************ */
+  
+  .titleBrown
+    {
+	  border-color:				#C6986C;
+	  background-color:			#C6986C;
+	  color:					#5F4225;
+	}
+  .textBrown
+    {
+	  background-color:			#C6986C;
+	  color:					#5F4225;
+	  border-color:				#5F4225;
+	}
+
+/* ************************************************************************** */
+
+  .textBrownTransparent
+    {
+	  background-color:			transparent;
+	  color:					#5F4225;
+	  border-color:				#5F4225;
+	}
+

@@ -1,0 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                   Copyright © 2003 EarthWalk Village.         			  */
+/*                                                                            */
+/* ************************************************************************** */
+  #subBlock
+    {
+	  text-align:       center;
+	  width:			150px;
+	  margin-left:		5px;
+	  margin-right:		15px;
+	  border-style:		outset;
+	}
+  #subNewsletterTitle
+    {
+	  font-size:		14px;
+	  font-weight:		normal;
+	}
+  #subBody
+    {
+	   font-size:		10px;
+	}
+  #subForm
+    {
+	   text-align:		left;
+	   vertical-align:	middle;
+	   padding:			5px;
+	}
+

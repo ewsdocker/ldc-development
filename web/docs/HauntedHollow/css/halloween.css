@@ -1,0 +1,357 @@
+/*
+     Copyright © 2002. EarthWalk Village.
+*/
+
+  #leftColumn
+    {
+	  text-align:             center;
+	  vertical-align:		  top;
+	  left:       			  0px;
+	  width:      			  15%;
+	  font-size:  			  10px;
+	}
+  #mainBlock
+    {
+	  left:       			  16%;
+	  text-align: 			  left;
+	  vertical-align:		  top;
+	  padding:				  5px;
+	}
+  #middleColumn
+    {
+	  left:       			  0px;
+	  width:      			  80%;
+	  vertical-align:		  top;
+	}
+  #rightColumn
+    {
+	  text-align: 			  center;
+	  padding:	  			  5px;
+	  vertical-align:		  top;
+	}
+
+  #newsList
+    {
+	  font-size:              10px;
+	  text-align:             left;
+	  vertical-align:		  top;
+	  border-style:           none;
+	  border-size:			  1px;
+	  padding:				  10px;
+	}
+  #swissAdBlock
+    {
+	  text-align:             center;
+	  vertical-align:		  middle;
+	  border-style:           none;
+	  border-size:			  1px;
+	  padding:				  10px;
+	  font-size:              10px;
+	}
+  #hotelSearch
+    {
+	  font-size:              12px;
+	  width:				  400px;
+	  text-align:             center;
+	  border-style:           solid;
+	  border-size:			  1px;
+	  padding:				  10px;
+	}
+  #copyright
+    {
+	  position:				  relative;
+	  font-size:  			  10px;
+	  text-align: 			  center;
+	  left: 				  0px;
+	  width: 				  100%;
+	}
+  #translate
+    {
+	  padding:      		  5px;
+	  border-style: 		  dotted;
+	}
+  #textblockMedium
+    {
+      position:               relative;
+	  font-size:              14px;
+	  text-align:             left;
+	  border-style:           none;
+	}
+  #textblock
+    {
+	  font-size:              10px;
+	  text-align:             center;
+	  border-style:           none;
+	}
+  #articleBlock
+    {
+	  font-size:              12px;
+	  text-align:             center;
+	  border-style:			  outset;
+	  padding:				  2px;
+	  width:				  50%;
+	}
+  #articleBlockNarrow
+    {
+	  font-size:              12px;
+	  text-align:             center;
+	  border-style:			  outset;
+	  padding:				  5px;
+	}
+  #hauntideaBlock
+    {
+	  font-size:              12px;
+	  text-align:             left;
+	  border-style:			  outset;
+	  padding:				  5px;
+	}
+  #hauntideaBlockCentered
+    {
+	  text-align:		 	  center;
+	  font-weight:			  bold;
+	  font-size:			  14px;
+	}
+  #adBlock
+    {
+	  font-size:              12px;
+	  text-align:             center;
+	  border-style:           solid;
+	  padding:				  2px;
+	}
+  #adBlockNoBorder
+    {
+	  font-size:              12px;
+	  text-align:             center;
+	  border-style:           none;
+	  padding:				  2px;
+	}
+  #adBlockCandy
+    {
+	  width:   				  50%
+	  vertical-align:		  middle;
+	  font-size:              12px;
+	  text-align:             center;
+	  border-style:           solid;
+	  padding:				  10px;
+	}
+  #adBlockCandy2
+    {
+	  width:   				  50%
+	  vertical-align:		  middle;
+	  font-size:              12px;
+	  text-align:             left;
+	  border-style:           solid;
+	  padding:				  10px;
+	}
+  #spaceportsBanner
+    {
+	  font-size:              12px;
+	  width:				  480px;
+	  text-align:             center;
+	  border-style:           none;
+	  padding:				  2px;
+	}
+  #comicsBlock
+    {
+      position:               relative;
+	  font-size:              10px;
+	  text-align:             center;
+	  border-style:           solid;
+	  border-size:			  1px;
+	  float:				  right;
+	  margin:				  10px;
+	  padding:				  5px;
+	}
+  #comicsSmall
+    {
+	  font-size:              10px;
+	}
+  #wrappedArticle
+    {
+	  padding:	 			  10px;
+	  font-size:			  12px;
+	}
+  #wrappedArticle2
+    {
+	  padding:	 			  10px;
+	  font-size:			  12px;
+	}
+  #imageBlock1
+    {
+	  font-size:              12px;
+	  text-align:             center;
+	  border-style:           none;
+	  border-size:			  1px;
+	  float:				  right;
+	  margin:				  10px;
+	  padding:				  5px;
+	}
+  #imageBlock1Small
+    {
+	  font-size:              10px;
+	}
+  #tbLargeCentered
+    {
+      position:         	  relative;
+	  font-size:  			  12px;
+	  text-align: 			  center;
+	  border-style: 		  none;
+	}
+  #webRing
+    {
+	  font-size:              10px;
+	  text-align:             center;
+	  border-style:           solid;
+	  padding:				  5px;
+	}
+
+
+  #Banner
+    {
+	  text-align: 			  center;
+	}
+	  /* ********************************************************** */
+  	  #menuBlock
+        {
+	      text-align:				center;
+	  	  vertical-align:			top;
+	  	  font-size:				12px;
+	  	  font-weight:				normal;
+	  	  border-style:			  	outset;
+	  	  border-width:				1px;
+		  padding:					10px;
+	    }
+      #menuTitle
+        {
+	      text-align:				center;
+	  	  font-size:				16px;
+	  	  font-weight:				bold;
+	  	  border-style:				solid;
+	    }
+
+  .centered
+    {
+	  text-align: 			  center;
+	}
+  .EWVillage
+    {
+	  font-size:       		  14px;
+	  font-weight:     		  bold;
+	}
+  .EWVillageVirtual
+    {
+	  font-size:       		  12px;
+	  font-weight:     		  bold;
+	  font-style:	   		  italic;
+	}
+  .smallHighlight
+    {
+	  padding:	 	   		  10px;
+	  font-size:       		  12px;
+	  font-weight:     		  bold;
+	}
+  .PromoHighlight
+    {
+	  font-size:    		  16px;
+	  font-weight:  		  bold;
+	}
+	
+  body
+    {
+	  text-weight:			  normal;
+	  font-family:			  arial,verdanna;
+	  font-size:			  12px;
+      text-align:			  left;
+	}
+  dl
+    {
+	}
+  dd
+    {
+	  font-size:12px;
+	  font-weight:normal
+	}
+  dt
+    {
+	  font-size:12px;
+	  font-weight:bold;
+	}
+  hr
+    {
+	  width:      			  80%;
+	  text-align: 			  center;
+	}
+
+  a:active
+  	{
+	  text-decoration: 		  none;
+  	}
+  a:hover 
+  	{
+  	}
+  a:link 
+  	{
+	  text-decoration: 		  none;
+  	}
+  a:visited  
+  	{
+	  text-decoration: 		  none;
+  	}
+  table
+    {
+	  text-align:			  left;
+	  border-width:			  1px;
+	  border-style:			  none;
+	  font-weight:			  normal;
+	  width:				  100%;
+	}
+  tr
+    {
+	}
+  td
+    {
+	  text-align:			  left;
+	  border-width:			  1px;
+	  border-style:			  none;
+	}
+
+  table.newsAd
+    {
+	  text-align:			  left;
+	  border-width:			  1px;
+	  border-style:			  none;
+	  font-size:			  10px;
+	  font-weight:			  normal;
+	  width:				  100%;
+	}
+  tr.newsAd
+    {
+	}
+  td.newsAd
+    {
+	  text-align:			  left;
+	  border-width:			  1px;
+	  border-style:			  none;
+	}
+
+  table.navBar
+    {
+	  text-align:			  right;
+	  border-width:			  1px;
+	  border-style:			  solid;
+	  font-size:			  10px;
+	  font-weight:			  bold;
+	  width:				  100%;
+	}
+  tr.navBar
+    {
+	}
+  td.navBar
+    {
+	  vertical-align:		  middle;
+	  text-align:			  center;
+	  border-width:			  1px;
+	  border-style:			  solid;
+	  width:				  40px;
+	}
+

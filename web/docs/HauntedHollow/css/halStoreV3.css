@@ -1,0 +1,79 @@
+      #idLeftColumn
+        {
+		  position:     absolute;
+		  top:			0px;
+		  left:			0px;
+	      text-align: 	center;
+	  	  font-size:  	14px;
+		  color: 		#FF0000;
+		  border-style: none;
+		  z-level:		10;
+	    }
+
+      #idRightColumn
+        {
+		  position: 	absolute;
+	      text-align: 	center;
+	  	  font-size:  	10px;
+		  color: 		#FF0000;
+		  width:		150px;
+		  border-style: none;
+	    }
+
+      #idMiddleColumn
+        {
+		  position: 	absolute;
+	      text-align: 	left;
+	  	  font-size:  	16px;
+		  color: 		#FF0000;
+		  border-style: none;
+	    }
+
+	  #idAdvert1
+        {
+		  position:     relative;
+	      text-align: 	center;
+	  	  padding:      5px;
+		  width:		150px;
+		  border-style: none;
+	  	  border-color: #FF0000;
+	    }
+	  #idAdvert2
+        {
+		  position:     relative;
+	      text-align: 	center;
+	  	  padding:      5px;
+		  width:		150px;
+		  border-style: none;
+	  	  border-color: #FF0000;
+	    }
+
+	  #idTranslate
+        {
+		  position:     relative;
+	      text-align: 	center;
+	  	  padding:      5px;
+		  width:		130px;
+		  border-style: dotted;
+	  	  border-color: #FF0000;
+	    }
+  	  #idDetectChange
+        {
+		  position:     relative;
+	  	  padding:      5px;
+		  border-style: none;
+		  width:		160px;
+	  	  border-color: #FF0000;
+		  color:		#FF0000;
+	    }
+
+	  #idContent
+	    {
+		  position:		relative;
+		  padding:		5px;
+		  width:		500px;
+		  border-style: none;
+		  border-color: #FF0000;
+		  text-align:	left;
+		  color:		#FF0000;
+		}

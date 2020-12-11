@@ -1,0 +1,70 @@
+/*
+     Copyright © 2002. EarthWalk Village.
+*/
+
+  #idContainer1
+	  { 
+	      position:			absolute; 
+	      text-align: 		center;
+	  	  font-size:  		10px;
+		  border-style: 	none;
+		  border-color:		#FF0000;
+		  border-width: 	1px;
+      }
+  #idCopyright
+      {
+		  position:     	relative;
+		  width:			200;
+		  border-style: 	none;
+		  border-color:		#0000FF;
+		  border-width: 	1px;
+	  }
+
+  #idFollower1
+      {
+		  border-style: 	none;
+		  border-color:		#0000FF;
+		  border-width: 	1px;
+	  }
+  
+  #idRndWalk
+      {
+		  border-style: 	none;
+		  border-color:		#0000FF;
+		  border-width: 	1px;
+	  }
+
+  #idAdvert1
+      {
+		  position:     	relative;
+	      text-align: 		center;
+	  	  padding:      	5px;
+		  width:			150px;
+		  border-style: 	none;
+	  	  border-color: 	#FF0000;
+		  border-width: 	1px;
+      }
+  #idAdvert2
+      {
+		  position:     relative;
+	      text-align: 	center;
+	  	  padding:      5px;
+		  width:		150px;
+		  border-style: none;
+	  	  border-color: #FF0000;
+		  border-width: 	1px;
+      }
+  #idTranslate
+      {
+		  position:     relative;
+	      text-align: 	center;
+	  	  padding:      5px;
+		  width:		130px;
+		  border-style: dotted;
+	  	  border-color: #FF0000;
+      }
+  #idMover1
+      {
+	      background: transparent;
+		  layer-background-color: transparent;
+	  }
