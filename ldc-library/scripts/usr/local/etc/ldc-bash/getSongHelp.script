@@ -1,0 +1,32 @@
+
+getSongHelp.json
+================
+
+Get the level 0 keys
+	jq '. | keys ' getSongHelp.json
+
+Get options fields:
+	jq '. | [.options | to_entries[] | {"key": .key, "value": .value.use}] | from_entries' getSongHelp.json
+	jq '. | [.options | to_entries[] | {"key": .key, "value": .value.use}] | from_entries | keys' getSongHelp.json
+
+Get labels fields:
+	jq '. | [.labels | to_entries[] | {"key": .key, "value": .value.heading}] | from_entries' getSongHelp.json
+	jq '. | [.labels | to_entries[] | {"key": .key, "value": .value.heading}] | from_entries | keys | .' getSongHelp.json
+
+
+getSongOptions.json
+===================
+
+jq '. | [.declare | to_entries[] | {"key": .key, "value": .value.value}] | from_entries' getSongOptions.json
+jq '. | [.declare | to_entries[] | {"key": .key, "value": .value.value}] | from_entries | keys' getSongOptions.json
+
+jq '. | [.declare.ldccli_shellParam | to_entries[] | {"key": .key, "value": .value.value}] | from_entries' getSongOptions.json
+jq '. | [.declare.ldccli_shellParam | to_entries[] | {"key": .key, "value": .value.value}] | from_entries | keys' getSongOptions.json
+
+
+
+reference
+===================
+
+https://michaelheap.com/extract-keys-using-jq/
+

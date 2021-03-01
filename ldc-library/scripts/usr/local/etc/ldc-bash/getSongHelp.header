@@ -1,0 +1,3 @@
+["command"]="[option][=value] ..."
+["options"]="Options  (brief detail)"
+["footer"]="   nn = numeric value | ss = string value"

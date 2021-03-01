@@ -1,0 +1,11 @@
+{
+  "alter": "  = alternative to use for single quote character",
+  "base": "   = base directory for storing files (must have a trailing /)",
+  "debug": "  = debug flag setting",
+  "help": "   = help (display this message)",
+  "play": "   = seconds to wait between song playing queries",
+  "quiet": "  = enable/disable output to the console",
+  "reduce": " = apply 'alter' option if set to 1",
+  "run": "    = seconds to wait between program running queries",
+  "sleep": "  = seconds to wait between song ended queries"
+}

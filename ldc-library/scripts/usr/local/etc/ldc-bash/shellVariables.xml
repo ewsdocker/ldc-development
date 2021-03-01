@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- copyright © 2014, 2016. EarthWalk Software. -->
+<ldc>
+	<options>
+
+		<ldc_optDebug>0</ldc_optDebug>
+		<ldc_optSilent>0</ldc_optSilent>
+		<ldc_optBatch>0</ldc_optBatch>
+		<ldc_optOverride>0</ldc_optOverride>
+		<ldc_optNoReset>0</ldc_optNoReset>
+
+		<subversion>
+			<var name="host">localhost</var>
+			<var name="path">svn</var>
+			<var name="repo">LinuxManagement</var>
+			<var name="branch">trunk</var>
+			<var name="folder">Bash</var>
+		</subversion>
+	
+		<installOptions>
+			<var name="binDir">bin</var>
+			<var name="etcDir">etc</var>
+			<var name="lang">bash</var>
+			<var name="libDir">lib</var>
+			<var name="manDir">share</var>
+			<var name="rootDir">local</var>
+			<var name="srcDir">src</var>
+			<var name="subDir">Bash</var>
+			<var name="type">local</var>
+		</installOptions>
+
+		<cliParameters>
+
+			<parameter name="batch">
+				<map>ldc_optBatch</map>
+				<type>1</type>
+				<default>0</default>
+			</parameter>
+
+			<parameter name="bin">
+				<map>ldc_optBinDir</map>
+				<type>0</type>
+				<default>bin</default>
+			</parameter>
+
+			<parameter name="debug">
+				<map>ldc_optDebug</map>
+				<type>0</type>
+				<default>0</default>
+			</parameter>
+
+			<parameter name="etc">
+				<map>ldc_optEtcDir</map>
+				<type>0</type>
+				<default>etc</default>
+			</parameter>
+
+			<parameter name="fetch">
+				<map>ldc_optFetch</map>
+				<type>1</type>
+				<default>0</default>
+			</parameter>
+
+			<parameter name="help">
+				<map>ldc_optHelp</map>
+				<type>1</type>
+			</parameter>
+
+			<parameter name="host">
+				<map>ldc_optHost</map>
+				<type>0</type>
+				<default>localhost</default>
+			</parameter>
+	
+			<parameter name="lang">
+				<map>ldc_optLang</map>
+				<type>0</type>
+				<default>bash</default>
+			</parameter>
+
+			<parameter name="lib">
+				<map>ldc_optLib</map>
+				<type>0</type>
+				<default>0.0.1</default>
+			</parameter>
+
+			<parameter name="man">
+				<map>ldc_optManDir</map>
+				<type>0</type>
+				<default>share</default>
+			</parameter>
+
+			<parameter name="path">
+				<map>ldc_optPath</map>
+				<type>0</type>
+				<default>svn</default>
+			</parameter>
+
+			<parameter name="quiet">
+				<map>ldc_optSilent</map>
+				<type>0</type>
+				<default>0</default>
+			</parameter>
+
+			<parameter name="repoName">
+				<map>ldc_optRepo</map>
+				<type>0</type>
+				<default>test</default>
+			</parameter>
+
+			<parameter name="rootdir">
+				<map>ldc_optRoot</map>
+				<type>0</type>
+				<default>local</default>
+			</parameter>
+
+			<parameter name="script">
+				<map>ldc_optScript</map>
+				<type>1</type>
+				<default>ldcInstallScript</default>
+			</parameter>
+
+			<parameter name="src">
+				<map>ldc_optSrcDir</map>
+				<type>0</type>
+				<default>src</default>
+			</parameter>
+
+			<parameter name="type">
+				<map>ldc_optType</map>
+				<type>0</type>
+				<default>local</default>
+			</parameter>
+
+		</cliParameters>
+
+
+	</options>
+
+</ldc>

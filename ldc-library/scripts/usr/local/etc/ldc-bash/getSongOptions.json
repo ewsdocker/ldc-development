@@ -1,0 +1,35 @@
+{
+	"declare": 
+	{
+	 "ldccli_optAlter":  {"value": "-"},
+	 "ldccli_optBase":   {"value": "/media/sf_Shared/MBroadcast/butt/djmaster/"},
+     "ldccli_optDebug":  {"value": "0"},
+	 "ldccli_optHelp" :  {"value": "0"},
+	 "ldccli_optPlay":   {"value": "10"},
+	 "ldccli_optQuiet":  {"value": "0"},
+	 "ldccli_optReduce": {"value": "1"},
+	 "ldccli_optRun":    {"value": "30"},
+	 "ldccli_optSleep":  {"value": "5"},
+	 "ldccli_shellParam": 
+       {
+		"alter":  {"value": "optAlter"},
+		"base":   {"value": "optBase"},
+		"debug":  {"value": "optDebug"},
+		"help":   {"value": "optHelp"},
+		"play":   {"value": "optPlay"},
+		"quiet":  {"value": "optSilent"},
+		"reduce": {"value": "optReduce"},
+		"run" :   {"value": "optRun"},
+		"sleep":  {"value": "optSleep"}
+	   },
+
+	 "ldcsng_fileCurrent":  {"value": "CurrentSong"},
+	 "ldcsng_fileListName": {"value": "SongList"},
+	 "ldcsng_fileRoot":     {"value": "/media/sf_Shared/MBroadcast/songlists/"},
+	 "ldcsng_fileRootList": {"value": "/media/sf_Shared/MBroadcast/songlists/djmaster/"},
+	 "ldcsng_fileSongHost": {"value": "SongHost"},
+	 "ldcsng_fileSongName": {"value": "SongName"},
+	 "ldcsng_reduceQuote":  {"value": "1"}
+    }
+
+}

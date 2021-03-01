@@ -1,0 +1,23 @@
+
+{
+	"labels": 
+	  { 
+		"command": {"heading": "[option][=value] ..."},
+        "options": {"heading": "Options  (brief detail)"},
+        "footer": {"heading": "   nn = numeric value | ss = string value"}
+	  },
+	"options": 
+	  {
+        "alter": {"use": "  = alternative to use for single quote character"},
+	    "base": {"use": "   = base directory for storing files (must have a trailing /)"},
+	    "debug": {"use": "  = debug flag setting"},
+		"help": {"use": "   = help (display this message)"},
+        "play": {"use": "   = seconds to wait between song playing queries"},
+		"quiet": {"use": "  = enable/disable output to the console"},
+		"reduce": {"use": " = apply 'alter' option if set to 1"},
+		"run": {"use": "    = seconds to wait between program running queries"},
+		"sleep": {"use": "  = seconds to wait between song ended queries"}
+	  }
+}
+
+

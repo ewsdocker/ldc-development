@@ -1,0 +1,123 @@
+#!/binbash
+# ******************************************************************************
+# ******************************************************************************
+#
+#  	ldcDescriptor.lib
+#		Create, manage and destroy ldc descriptors.
+#
+#	The descriptor is a user defined object. The only requirement to 
+#	a "universal" descriptor are the first n fields which define the
+#	descriptor's use.
+#
+# *****************************************************************************
+#
+# @author Jay Wheeler.
+# @version 0.0.1
+# @copyright © 2021. EarthWalk Software.
+# @license Licensed under the GNU General Public License, GPL-3.0-or-later.
+# @package ewsdocker/ldc-library
+# @subpackage ldcDescriptor
+#
+# *****************************************************************************
+#
+#	Copyright © 2021. EarthWalk Software
+#	Licensed under the GNU General Public License, GPL-3.0-or-later.
+#
+#   This file is part of ewsdocker/ldc-library.
+#
+#   ewsdocker/ldc-library is free software: you can redistribute 
+#   it and/or modify it under the terms of the GNU General Public License 
+#   as published by the Free Software Foundation, either version 3 of the 
+#   License, or (at your option) any later version.
+#
+#   ewsdocker/ldc-library is distributed in the hope that it will 
+#   be useful, but WITHOUT ANY WARRANTY; without even the implied warranty 
+#   of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with ewsdocker/ldc-library.  If not, see 
+#   <http://www.gnu.org/licenses/>.
+#
+# *****************************************************************************
+#
+#	Version 0.0.1 - 02-01-2021.
+#
+# ******************************************************************************
+#
+#	Dependencies
+#
+#		ldcDescriptor.lib
+#
+# *****************************************************************************
+#
+#	Functions:
+#
+#
+#
+#
+# ******************************************************************************
+#
+#	Global declarations:
+#
+#
+#
+# ******************************************************************************
+
+declare -r ldclib_ldcDescriptor="0.0.1"		# version of ldcJq
+
+# ******************************************************************************
+#
+#	ldcDescriptors provide context free descriptors
+#	defined by the caller
+#  
+#	Structure
+#
+#		function
+#			initialize	= initialize functions
+#			lookup		= lookup descriptor
+#			list		= list all descriptors
+#			create		= initialize descriptor
+#			build		= build descriptor
+#
+#		caller (the client)
+#			call function name
+#
+#		responder (the server)
+#			server function name
+#
+#
+#
+# ******************************************************************************
+
+# ******************************************************************************
+# ******************************************************************************
+#
+#						Functions
+#
+# ******************************************************************************
+# ******************************************************************************
+
+# ******************************************************************************
+#
+#	ldcDescriptorCreate
+#
+#		initialize a new descriptor
+#
+#	parameters:
+#		file = absolute path to the json file to query
+#		jqpath = (optional) path to the jq program
+#
+#	returns:
+#		0 = no error
+#		non-zero = error code
+#
+# ******************************************************************************
+function ldcDescriptorInit()
+{
+}
+
+
+# ******************************************************************************
+# ******************************************************************************
+
