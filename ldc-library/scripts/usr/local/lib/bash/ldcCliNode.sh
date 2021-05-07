@@ -72,7 +72,7 @@ declare    ldcclin_node=""						# node name
 # ******************************************************************************
 function ldcClinName()
 {
-	[[ -z "${1}" || -z "${2}" | -z "${3}" ]] && return 1
+	[[ -z "${1}" || -z "${2}" || -z "${3}" ]] && return 1
 
 	printf -v ${3} "ldcclin_%s%05u" ${1} ${2}
 	return 0
@@ -96,7 +96,7 @@ function ldcClinName()
 # ******************************************************************************
 function ldcClinCurrent()
 {
-	[[ -z "${1}" || -z "${2}" | -z "${3}" ]] && return 1
+	[[ -z "${1}" || -z "${2}" || -z "${3}" ]] && return 1
 
 	ldcDynnMap ${1} ${2} ${3} 
 	[[ $? -eq 0 ]] && return 0
